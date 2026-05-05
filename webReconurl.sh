@@ -22,7 +22,7 @@ user_agent=$(get_random_user_agent)
 }
 
 if [ -z $domain ]; then
-    echo "./webRecon <domain>"
+    echo "$0 <domain>"
 else
     for word in $(cat words.txt); do
 	sleep 2
