@@ -27,7 +27,7 @@ else
     for word in $(cat words.txt); do
 	sleep 2
 	used_agents
-    	response=$(curl -H "User-Agent:$user_agent" -s -o /dev/null -w "%{http_code}" https://$word.$domain/)
+    	response=$(curl -H "User-Agent:$user_agent" -s -o /dev/null -w "%{http_code}" $word.$domain)
     	echo "$user_agent + $word.$domain" = $response
     done
 fi
