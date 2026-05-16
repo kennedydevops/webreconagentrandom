@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# the file words.txt should be create for you locally
+#
 
 domain=$1
 
