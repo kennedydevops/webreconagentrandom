@@ -31,8 +31,8 @@ else
     for word in $(cat words.txt); do
 	sleep 2
 	used_agents
-    	response=$(curl -H "User-Agent:$user_agent" -s -o /dev/null -w "%{http_code}" http://$word.$domain)
-	response2=$(curl -H "User-Agent:$user_agent" -s -o /dev/null -w "%{http_code}" http://$domain/$word)
+    	response=$(curl -H "User-Agent:$user_agent" -s -o /dev/null -w "%{http_code}" https://$word.$domain)
+	response2=$(curl -H "User-Agent:$user_agent" -s -o /dev/null -w "%{http_code}" https://$domain/$word)
 	echo "$user_agent + http://$word.$domain" = $response
 	echo "$user_agent + http://$word.$domain" = $response >> resultado.txt
 
